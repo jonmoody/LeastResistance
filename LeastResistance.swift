@@ -22,9 +22,14 @@ class LeastResistance {
         return grid[0].count >= 5 && grid[0].count <= 100
     }
 
+    func moveToNextColumn(moveToNewRow: Int) {
+        currentRow += moveToNewRow
+        moveToNextColumn()
+    }
+
     func moveToNextColumn() {
         currentColumn++
-        totalResistance += grid[0][currentColumn]
+        totalResistance += grid[currentRow][currentColumn]
 
         if (!pathOfLeastResistance.isEmpty) {
             pathOfLeastResistance += " "
