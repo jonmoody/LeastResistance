@@ -1,8 +1,10 @@
 class LeastResistance {
 
     let grid: [[Int]]
+    var currentRow: Int = 0
     var currentColumn: Int = -1
     var totalResistance: Int = 0
+    var pathOfLeastResistance: String = ""
 
     init(grid: [[Int]]) {
         self.grid = grid
@@ -23,6 +25,11 @@ class LeastResistance {
     func moveToNextColumn() {
         currentColumn++
         totalResistance += grid[0][currentColumn]
+
+        if (!pathOfLeastResistance.isEmpty) {
+            pathOfLeastResistance += " "
+        }
+        pathOfLeastResistance += String(currentRow + 1)
     }
 
     func getTotalResistance() -> Int {
@@ -31,5 +38,9 @@ class LeastResistance {
 
     func isFlowSuccessful() -> String {
         return totalResistance <= 50 ? "Yes" : "No"
+    }
+
+    func getPathOfLeastResistance() -> String {
+        return pathOfLeastResistance
     }
 }
