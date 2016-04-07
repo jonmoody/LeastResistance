@@ -7,6 +7,6 @@ class LeastResistance {
     }
 
     func isValidGrid() -> Bool {
-        return grid.count > 0
+        return grid.count > 0 && grid.count <= 10
     }
 }
