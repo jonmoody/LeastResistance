@@ -9,6 +9,7 @@ class LeastResistanceTests: XCTestCase {
         let leastResistance = LeastResistance(grid: expectedGrid)
 
         XCTAssertEqual(expectedGrid, leastResistance.grid)
+        XCTAssertTrue(leastResistance.isValidGrid())
     }
 
     func testAGridMustHaveAtLeastOneRow() {
