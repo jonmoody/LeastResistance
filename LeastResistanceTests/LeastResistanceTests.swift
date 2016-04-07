@@ -10,5 +10,13 @@ class LeastResistanceTests: XCTestCase {
 
         XCTAssertEqual(expectedGrid, leastResistance.grid)
     }
+
+    func testAGridMustHaveAtLeastOneRow() {
+        let invalidGrid: [[Int]] = []
+
+        let leastResistance = LeastResistance(grid: invalidGrid)
+
+        XCTAssertFalse(leastResistance.isValidGrid())
+    }
     
 }
