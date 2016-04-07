@@ -30,6 +30,6 @@ class LeastResistance {
     }
 
     func isFlowSuccessful() -> String {
-        return "Yes"
+        return totalResistance <= 50 ? "Yes" : "No"
     }
 }
