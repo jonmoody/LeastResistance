@@ -27,5 +27,29 @@ class LeastResistanceTests: XCTestCase {
 
         XCTAssertFalse(leastResistance.isValidGrid())
     }
+
+    func testAGridMustHaveAtLeastFiveColumns() {
+        let invalidGrid: [[Int]] = [[1, 2, 3, 4]]
+
+        let leastResistance = LeastResistance(grid: invalidGrid)
+
+        XCTAssertFalse(leastResistance.isValidGrid())
+    }
+
+    func testAGridCanHaveAMaximumOfOneHundredColumns() {
+        let invalidGrid: [[Int]] = createGridWithOverOneHundredColumns()
+
+        let leastResistance = LeastResistance(grid: invalidGrid)
+
+        XCTAssertFalse(leastResistance.isValidGrid())
+    }
+
+    func createGridWithOverOneHundredColumns() -> [[Int]] {
+        var grid: [[Int]] = [[]]
+        for var x = 0; x < 101; x++ {
+            grid[0].append(1)
+        }
+        return grid
+    }
     
 }
