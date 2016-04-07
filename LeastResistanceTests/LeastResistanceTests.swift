@@ -44,6 +44,18 @@ class LeastResistanceTests: XCTestCase {
         XCTAssertFalse(leastResistance.isValidGrid())
     }
 
+    func testWhenMovingToTheNextColumnThenTheResistanceOfTheNextColumnIsAddedToTheTotalResistance() {
+        let grid: [[Int]] = [[1, 3, 5]]
+
+        let leastResistance = LeastResistance(grid: grid)
+
+        leastResistance.moveToNextColumn()
+        XCTAssertEqual(1, leastResistance.getTotalResistance())
+
+        leastResistance.moveToNextColumn()
+        XCTAssertEqual(4, leastResistance.getTotalResistance())
+    }
+
     func createGridWithOverOneHundredColumns() -> [[Int]] {
         var grid: [[Int]] = [[]]
         for var x = 0; x < 101; x++ {

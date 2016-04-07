@@ -1,6 +1,8 @@
 class LeastResistance {
 
     let grid: [[Int]]
+    var currentColumn: Int = -1
+    var totalResistance: Int = 0
 
     init(grid: [[Int]]) {
         self.grid = grid
@@ -16,5 +18,14 @@ class LeastResistance {
 
     func gridContainsValidNumberOfColumns() -> Bool {
         return grid[0].count >= 5 && grid[0].count <= 100
+    }
+
+    func moveToNextColumn() {
+        currentColumn++
+        totalResistance += grid[0][currentColumn]
+    }
+
+    func getTotalResistance() -> Int {
+        return totalResistance
     }
 }
