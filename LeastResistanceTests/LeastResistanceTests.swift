@@ -56,6 +56,17 @@ class LeastResistanceTests: XCTestCase {
         XCTAssertEqual(4, leastResistance.getTotalResistance())
     }
 
+    func testWhenMovingToTheLastColumnThenTheEnergyFlowHasSuccessfullyTraversedTheGrid() {
+        let grid: [[Int]] = [[1, 3, 5]]
+
+        let leastResistance = LeastResistance(grid: grid)
+        leastResistance.moveToNextColumn()
+        leastResistance.moveToNextColumn()
+        leastResistance.moveToNextColumn()
+
+        XCTAssertEqual("Yes", leastResistance.isFlowSuccessful())
+    }
+
     func createGridWithOverOneHundredColumns() -> [[Int]] {
         var grid: [[Int]] = [[]]
         for var x = 0; x < 101; x++ {

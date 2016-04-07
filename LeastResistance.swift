@@ -28,4 +28,8 @@ class LeastResistance {
     func getTotalResistance() -> Int {
         return totalResistance
     }
+
+    func isFlowSuccessful() -> String {
+        return "Yes"
+    }
 }
