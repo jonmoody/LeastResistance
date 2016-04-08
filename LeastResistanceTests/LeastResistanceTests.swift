@@ -1,6 +1,9 @@
 import XCTest
 
 class LeastResistanceTests: XCTestCase {
+
+    let moveUp: Int = -1
+    let moveDown: Int = 1
     
     func testAGridCanBeCreated() {
         let expectedGrid: [[Int]] = [[1, 2, 3, 4, 5],
@@ -97,8 +100,8 @@ class LeastResistanceTests: XCTestCase {
 
         let leastResistance = LeastResistance(grid: grid)
         leastResistance.moveToNextColumn()
-        leastResistance.moveToNextColumn(1)
-        leastResistance.moveToNextColumn(-1)
+        leastResistance.moveToNextColumn(moveDown)
+        leastResistance.moveToNextColumn(moveUp)
 
         XCTAssertEqual("1 2 1", leastResistance.getPathOfLeastResistance())
     }
