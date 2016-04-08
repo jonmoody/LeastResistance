@@ -118,6 +118,19 @@ class LeastResistanceTests: XCTestCase {
         XCTAssertEqual("1 3", leastResistance.getPathOfLeastResistance())
     }
 
+    func testWhenTraversingTheGridMovingDownFromTheLastRowThenTheFlowWrapsToTheFirstRow() {
+        let grid: [[Int]] = [[3, 1],
+                             [2, 5],
+                             [1, 3]]
+
+        let leastResistance = LeastResistance(grid: grid)
+        leastResistance.currentRow = 2
+        leastResistance.moveToNextColumn()
+        leastResistance.moveToNextColumn(moveDown)
+
+        XCTAssertEqual("3 1", leastResistance.getPathOfLeastResistance())
+    }
+
     func createGridWithOverOneHundredColumns() -> [[Int]] {
         var grid: [[Int]] = [[]]
         for var x = 0; x < 101; x++ {
