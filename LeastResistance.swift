@@ -23,7 +23,11 @@ class LeastResistance {
     }
 
     func moveToNextColumn(moveToNewRow: Int) {
-        currentRow += moveToNewRow
+        if (currentRow == 0) {
+            currentRow = grid.count - 1
+        } else {
+            currentRow += moveToNewRow
+        }
         moveToNextColumn()
     }
 
