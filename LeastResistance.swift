@@ -56,7 +56,9 @@ class LeastResistance {
     }
 
     func calculateMostEfficientPath() -> String {
-        moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
+        for (var row: Int = 0; row < grid.count; row++) {
+            moveToNextColumn(row, currentColumn: 0, totalResistance: 0, path: "")
+        }
 
         return pathOfLeastResistance
     }

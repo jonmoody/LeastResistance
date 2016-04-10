@@ -115,6 +115,18 @@ class LeastResistanceTests: XCTestCase {
         XCTAssertEqual("1 2 3 4 4 5", leastResistance.calculateMostEfficientPath())
     }
 
+    func testWhenTraversingTheGridTheMostEfficientPathCanBeFoundInSubsequentRows() {
+        let grid: [[Int]] = [[9, 9, 9, 9, 9, 9],
+                             [9, 9, 9, 9, 9, 1],
+                             [9, 9, 1, 9, 1, 9],
+                             [9, 1, 9, 1, 9, 9],
+                             [1, 9, 9, 9, 9, 9]]
+
+        let leastResistance = LeastResistance(grid: grid)
+
+        XCTAssertEqual("5 4 3 4 3 2", leastResistance.calculateMostEfficientPath())
+    }
+
     func createGridWithOverOneHundredColumns() -> [[Int]] {
         var grid: [[Int]] = [[]]
         for var x = 0; x < 101; x++ {
