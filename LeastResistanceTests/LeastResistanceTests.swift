@@ -103,7 +103,7 @@ class LeastResistanceTests: XCTestCase {
         let leastResistance = LeastResistance(grid: grid)
         leastResistance.moveToNextColumn(2, currentColumn: 0, totalResistance: 0, path: "")
 
-        XCTAssertEqual("3 1", leastResistance.getPathOfLeastResistance())
+        XCTAssertEqual("3 1", leastResistance.calculateMostEfficientPath())
     }
 
     func testWhenTraversingTheGridTheMostEfficientPathCanBeFoundStartingFromTheFirstRow() {

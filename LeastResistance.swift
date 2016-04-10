@@ -57,10 +57,6 @@ class LeastResistance {
         return leastTotalResistance <= 50 ? "Yes" : "No"
     }
 
-    func getPathOfLeastResistance() -> String {
-        return pathOfLeastResistance
-    }
-
     func calculateMostEfficientPath() -> String {
         moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
 
