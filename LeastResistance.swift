@@ -1,6 +1,14 @@
 class LeastResistance {
 
     let grid: [[Int]]
+
+    let maxTotalResistance: Int = 50
+
+    let minNumberOfRows: Int = 1
+    let maxNumberOfRows: Int = 10
+    let minNumberOfColumns: Int = 5
+    let maxNumberOfColumns: Int = 100
+
     var leastTotalResistance: Int = 99
     var pathOfLeastResistance: String = ""
     var furthestColumn: Int = -1
@@ -14,25 +22,20 @@ class LeastResistance {
     }
 
     func gridContainsValidNumberOfRows() -> Bool {
-        return grid.count > 0 && grid.count <= 10
+        return grid.count >= minNumberOfRows && grid.count <= maxNumberOfRows
     }
 
     func gridContainsValidNumberOfColumns() -> Bool {
-        return grid[0].count >= 5 && grid[0].count <= 100
+        return grid[0].count >= minNumberOfColumns && grid[0].count <= maxNumberOfColumns
     }
 
     func moveToNextColumn(var currentRow: Int, currentColumn: Int, var totalResistance: Int, var path: String) {
-        if (currentRow < 0) {
-            currentRow = grid.count - 1
-        } else if (currentRow == grid.count) {
-            currentRow = 0
-        }
+        currentRow = wrapCurrentRow(currentRow)
 
         let currentResistance = grid[currentRow][currentColumn]
-
         totalResistance += currentResistance
 
-        if (totalResistance > 50) {
+        if (totalResistance > maxTotalResistance) {
             if (currentColumn > furthestColumn) {
                 leastTotalResistance = totalResistance - currentResistance
                 pathOfLeastResistance = path
@@ -61,7 +64,7 @@ class LeastResistance {
     }
 
     func isFlowSuccessful() -> String {
-        return leastTotalResistance <= 50 && furthestColumn == grid[0].count - 1 ? "Yes" : "No"
+        return leastTotalResistance <= maxTotalResistance && furthestColumn == grid[0].count - 1 ? "Yes" : "No"
     }
 
     func addCurrentRowToPath(var path: String, currentRow: Int) -> String {
@@ -72,6 +75,15 @@ class LeastResistance {
         path += String(currentRow + 1)
 
         return path
+    }
+
+    func wrapCurrentRow(var currentRow: Int) -> Int {
+        if (currentRow < 0) {
+            currentRow = grid.count - 1
+        } else if (currentRow == grid.count) {
+            currentRow = 0
+        }
+        return currentRow
     }
 
     func calculateMostEfficientPath() -> String {
