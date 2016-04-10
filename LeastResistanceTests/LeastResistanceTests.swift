@@ -2,9 +2,6 @@ import XCTest
 
 class LeastResistanceTests: XCTestCase {
 
-    let moveUp: Int = -1
-    let moveDown: Int = 1
-    
     func testAGridCanBeCreated() {
         let expectedGrid: [[Int]] = [[1, 2, 3, 4, 5],
                                      [6, 7, 8, 9, 10]]

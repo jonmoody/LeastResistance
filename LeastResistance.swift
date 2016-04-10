@@ -1,8 +1,6 @@
 class LeastResistance {
 
     let grid: [[Int]]
-    var currentRow: Int = 0
-    var currentColumn: Int = -1
     var leastTotalResistance: Int = 99
     var pathOfLeastResistance: String = ""
 
