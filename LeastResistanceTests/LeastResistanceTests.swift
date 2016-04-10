@@ -48,8 +48,8 @@ class LeastResistanceTests: XCTestCase {
         let grid: [[Int]] = [[1, 3, 5]]
 
         let leastResistance = LeastResistance(grid: grid)
+        leastResistance.calculateMostEfficientPath()
 
-        leastResistance.moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
         XCTAssertEqual(9, leastResistance.getLeastTotalResistance())
     }
 
@@ -57,7 +57,7 @@ class LeastResistanceTests: XCTestCase {
         let grid: [[Int]] = [[1, 3, 5]]
 
         let leastResistance = LeastResistance(grid: grid)
-        leastResistance.moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
+        leastResistance.calculateMostEfficientPath()
 
         XCTAssertEqual("Yes", leastResistance.isFlowSuccessful())
     }
@@ -66,7 +66,7 @@ class LeastResistanceTests: XCTestCase {
         let grid: [[Int]] = [[1, 50, 5]]
 
         let leastResistance = LeastResistance(grid: grid)
-        leastResistance.moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
+        leastResistance.calculateMostEfficientPath()
 
         XCTAssertEqual("No", leastResistance.isFlowSuccessful())
     }
@@ -95,7 +95,6 @@ class LeastResistanceTests: XCTestCase {
                              [3, 1, 3]]
 
         let leastResistance = LeastResistance(grid: grid)
-        leastResistance.moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
 
         XCTAssertEqual("1 2 1", leastResistance.calculateMostEfficientPath())
     }
@@ -106,7 +105,6 @@ class LeastResistanceTests: XCTestCase {
                              [3, 1]]
 
         let leastResistance = LeastResistance(grid: grid)
-        leastResistance.moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
 
         XCTAssertEqual("1 3", leastResistance.calculateMostEfficientPath())
     }
@@ -117,7 +115,6 @@ class LeastResistanceTests: XCTestCase {
                              [1, 3]]
 
         let leastResistance = LeastResistance(grid: grid)
-        leastResistance.moveToNextColumn(2, currentColumn: 0, totalResistance: 0, path: "")
 
         XCTAssertEqual("3 1", leastResistance.calculateMostEfficientPath())
     }
