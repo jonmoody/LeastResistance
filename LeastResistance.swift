@@ -3,7 +3,7 @@ class LeastResistance {
     let grid: [[Int]]
     var currentRow: Int = 0
     var currentColumn: Int = -1
-    var totalResistance: Int = 0
+    var leastTotalResistance: Int = 99
     var pathOfLeastResistance: String = ""
 
     init(grid: [[Int]]) {
@@ -22,37 +22,48 @@ class LeastResistance {
         return grid[0].count >= 5 && grid[0].count <= 100
     }
 
-    func moveToNextColumn(moveToNewRow: Int) {
-        currentRow += moveToNewRow
-
+    func moveToNextColumn(var currentRow: Int, currentColumn: Int, var totalResistance: Int, var path: String) {
         if (currentRow < 0) {
             currentRow = grid.count - 1
         } else if (currentRow == grid.count) {
             currentRow = 0
         }
 
-        moveToNextColumn()
-    }
-
-    func moveToNextColumn() {
-        currentColumn++
         totalResistance += grid[currentRow][currentColumn]
 
-        if (!pathOfLeastResistance.isEmpty) {
-            pathOfLeastResistance += " "
+        if (!path.isEmpty) {
+            path += " "
         }
-        pathOfLeastResistance += String(currentRow + 1)
+
+        path += String(currentRow + 1)
+
+        if (currentColumn == grid[0].count - 1) {
+            if (totalResistance < leastTotalResistance) {
+                leastTotalResistance = totalResistance
+                pathOfLeastResistance = path
+            }
+        } else {
+            moveToNextColumn(currentRow - 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
+            moveToNextColumn(currentRow, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
+            moveToNextColumn(currentRow + 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
+        }
     }
 
-    func getTotalResistance() -> Int {
-        return totalResistance
+    func getLeastTotalResistance() -> Int {
+        return leastTotalResistance
     }
 
     func isFlowSuccessful() -> String {
-        return totalResistance <= 50 ? "Yes" : "No"
+        return leastTotalResistance <= 50 ? "Yes" : "No"
     }
 
     func getPathOfLeastResistance() -> String {
+        return pathOfLeastResistance
+    }
+
+    func calculateMostEfficientPath() -> String {
+        moveToNextColumn(0, currentColumn: 0, totalResistance: 0, path: "")
+
         return pathOfLeastResistance
     }
 }
