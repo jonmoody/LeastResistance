@@ -29,6 +29,14 @@ class LeastResistance {
         return grid[0].count >= minNumberOfColumns && grid[0].count <= maxNumberOfColumns
     }
 
+    func calculateMostEfficientPath() -> String {
+        for (var row: Int = 0; row < grid.count; row++) {
+            moveToNextColumn(row, currentColumn: 0, totalResistance: 0, path: "")
+        }
+
+        return pathOfLeastResistance
+    }
+
     func moveToNextColumn(var currentRow: Int, currentColumn: Int, var totalResistance: Int, var path: String) {
         currentRow = wrapCurrentRow(currentRow)
 
@@ -46,17 +54,7 @@ class LeastResistance {
 
         path = addCurrentRowToPath(path, currentRow: currentRow)
 
-        if (currentColumn == grid[0].count - 1) {
-            if (totalResistance < leastTotalResistance) {
-                leastTotalResistance = totalResistance
-                pathOfLeastResistance = path
-                furthestColumn = currentColumn
-            }
-        } else {
-            moveToNextColumn(currentRow - 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
-            moveToNextColumn(currentRow, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
-            moveToNextColumn(currentRow + 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
-        }
+        moveToAdjacentNodes(currentRow, currentColumn: currentColumn, totalResistance: totalResistance, path: path)
     }
 
     func getLeastTotalResistance() -> Int {
@@ -86,11 +84,17 @@ class LeastResistance {
         return currentRow
     }
 
-    func calculateMostEfficientPath() -> String {
-        for (var row: Int = 0; row < grid.count; row++) {
-            moveToNextColumn(row, currentColumn: 0, totalResistance: 0, path: "")
+    func moveToAdjacentNodes(currentRow: Int, currentColumn: Int, totalResistance: Int, path: String) {
+        if (currentColumn == grid[0].count - 1) {
+            if (totalResistance < leastTotalResistance) {
+                leastTotalResistance = totalResistance
+                pathOfLeastResistance = path
+                furthestColumn = currentColumn
+            }
+        } else {
+            moveToNextColumn(currentRow - 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
+            moveToNextColumn(currentRow, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
+            moveToNextColumn(currentRow + 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
         }
-
-        return pathOfLeastResistance
     }
 }
