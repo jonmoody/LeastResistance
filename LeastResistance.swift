@@ -3,6 +3,7 @@ class LeastResistance {
     let grid: [[Int]]
     var leastTotalResistance: Int = 99
     var pathOfLeastResistance: String = ""
+    var furthestColumn: Int = -1
 
     init(grid: [[Int]]) {
         self.grid = grid
@@ -29,6 +30,15 @@ class LeastResistance {
 
         totalResistance += grid[currentRow][currentColumn]
 
+        if (totalResistance > 50) {
+            if (currentColumn > furthestColumn) {
+                leastTotalResistance = totalResistance - grid[currentRow][currentColumn]
+                pathOfLeastResistance = path
+                furthestColumn = currentColumn
+            }
+            return
+        }
+
         if (!path.isEmpty) {
             path += " "
         }
@@ -39,6 +49,7 @@ class LeastResistance {
             if (totalResistance < leastTotalResistance) {
                 leastTotalResistance = totalResistance
                 pathOfLeastResistance = path
+                furthestColumn = currentColumn
             }
         } else {
             moveToNextColumn(currentRow - 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)
@@ -52,7 +63,7 @@ class LeastResistance {
     }
 
     func isFlowSuccessful() -> String {
-        return leastTotalResistance <= 50 ? "Yes" : "No"
+        return leastTotalResistance <= 50 && furthestColumn == grid[0].count - 1 ? "Yes" : "No"
     }
 
     func calculateMostEfficientPath() -> String {
