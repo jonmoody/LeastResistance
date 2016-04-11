@@ -44,6 +44,15 @@ class LeastResistanceTests: XCTestCase {
         XCTAssertFalse(leastResistance.isValidGrid())
     }
 
+    func testAGridMustHaveTheSameNumberOfColumnsInEachRow() {
+        let invalidGrid: [[Int]] = [[1, 2, 3, 4, 5, 6],
+                                    [1, 2, 3, 4, 5]]
+
+        let leastResistance = LeastResistance(grid: invalidGrid)
+
+        XCTAssertFalse(leastResistance.isValidGrid())
+    }
+
     func testWhenTraversingTheGridThenTheResistanceOfEachColumnIsAddedToTheTotalResistance() {
         let grid: [[Int]] = [[1, 3, 5]]
 

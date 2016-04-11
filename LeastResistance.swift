@@ -23,7 +23,7 @@ class LeastResistance {
     }
 
     func isValidGrid() -> Bool {
-        return gridContainsValidNumberOfRows() && gridContainsValidNumberOfColumns()
+        return gridContainsValidNumberOfRows() && gridContainsValidNumberOfColumns() && columnCountsMatch()
     }
 
     func gridContainsValidNumberOfRows() -> Bool {
@@ -32,6 +32,16 @@ class LeastResistance {
 
     func gridContainsValidNumberOfColumns() -> Bool {
         return grid[0].count >= minNumberOfColumns && grid[0].count <= maxNumberOfColumns
+    }
+
+    func columnCountsMatch() -> Bool {
+        let columnCount: Int = grid[0].count
+        for (var row: Int = 1; row < grid.count; row++) {
+            if (grid[row].count != columnCount) {
+                return false
+            }
+        }
+        return true
     }
 
     func calculateMostEfficientPath() -> String {
