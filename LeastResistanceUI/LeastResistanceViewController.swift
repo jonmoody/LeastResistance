@@ -5,6 +5,17 @@ class LeastResistanceViewController: UIViewController {
     @IBOutlet weak var pathOfLeastResistanceLabel: UILabel!
     @IBOutlet weak var flowSuccessfulLabel: UILabel!
     @IBOutlet weak var totalResistanceLabel: UILabel!
+    @IBOutlet weak var calculateButton: UIButton!
+
+    override func viewDidLoad() {
+        grid.layer.cornerRadius = 5
+        grid.layer.borderColor = UIColor.blackColor().CGColor
+        grid.layer.borderWidth = 2
+
+        calculateButton.layer.cornerRadius = 5
+        calculateButton.layer.borderColor = UIColor.blackColor().CGColor
+        calculateButton.layer.borderWidth = 2
+    }
 
     @IBAction func calculatePathOfLeastResistance(sender: AnyObject) {
         let gridArray: [[Int]] = transformTextToArray(grid.text)
