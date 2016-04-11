@@ -22,6 +22,14 @@ class LeastResistanceViewController: UIViewController {
 
         let leastResistance = LeastResistance(grid: gridArray)
 
+        if (!leastResistance.isValidGrid()) {
+            pathOfLeastResistanceLabel.text = "Not a valid grid"
+            flowSuccessfulLabel.text = ""
+            totalResistanceLabel.text = ""
+
+            return
+        }
+
         pathOfLeastResistanceLabel.text = "Path: " + leastResistance.calculateMostEfficientPath()
         flowSuccessfulLabel.text = "Is Flow Successful: " + leastResistance.isFlowSuccessful()
         totalResistanceLabel.text = "Total Resistance: " + String(leastResistance.getLeastTotalResistance())
@@ -35,7 +43,9 @@ class LeastResistanceViewController: UIViewController {
             var currentRow: [String] = rows[row].componentsSeparatedByString(" ")
             var numbersInRow: [Int] = []
             for (var column = 0; column < currentRow.count; column++) {
-                numbersInRow.append(Int(currentRow[column])!)
+                if (currentRow[column] != "") {
+                    numbersInRow.append(Int(currentRow[column])!)
+                }
             }
             gridArray.append(numbersInRow)
         }

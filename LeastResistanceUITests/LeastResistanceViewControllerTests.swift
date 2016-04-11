@@ -11,5 +11,14 @@ class LeastResistanceViewControllerTests: XCTestCase {
 
         XCTAssertEqual(gridArray, [[1, 2, 3], [4, 5, 6]])
     }
+
+    func testWhenAnEmptyTextViewIsConvertedToAnArrayThenAnEmptyArrayIsCreated() {
+        let text: String = ""
+
+        let viewController = LeastResistanceViewController()
+        let gridArray: [[Int]] = viewController.transformTextToArray(text)
+
+        XCTAssertEqual([[]], gridArray)
+    }
     
 }
