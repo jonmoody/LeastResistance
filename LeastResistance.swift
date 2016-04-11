@@ -11,7 +11,12 @@ class LeastResistance {
 
     var leastTotalResistance: Int = 99
     var pathOfLeastResistance: String = ""
+
+    var bestPossibleResistance: Int = 99
+    var bestPossiblePath: String = ""
+
     var furthestColumn: Int = -1
+    var flowSuccessful: Bool = false
 
     init(grid: [[Int]]) {
         self.grid = grid
@@ -34,6 +39,11 @@ class LeastResistance {
             moveToNextColumn(row, currentColumn: 0, totalResistance: 0, path: "")
         }
 
+        if (!flowSuccessful) {
+            leastTotalResistance = bestPossibleResistance
+            return bestPossiblePath
+        }
+
         return pathOfLeastResistance
     }
 
@@ -44,9 +54,9 @@ class LeastResistance {
         totalResistance += currentResistance
 
         if (totalResistance > maxTotalResistance) {
-            if (currentColumn > furthestColumn) {
-                leastTotalResistance = totalResistance - currentResistance
-                pathOfLeastResistance = path
+            if (currentColumn > furthestColumn || currentColumn == furthestColumn && bestPossibleResistance > totalResistance - currentResistance) {
+                bestPossibleResistance = totalResistance - currentResistance
+                bestPossiblePath = path
                 furthestColumn = currentColumn
             }
             return
@@ -62,7 +72,7 @@ class LeastResistance {
     }
 
     func isFlowSuccessful() -> String {
-        return leastTotalResistance <= maxTotalResistance && furthestColumn == grid[0].count - 1 ? "Yes" : "No"
+        return flowSuccessful ? "Yes" : "No"
     }
 
     func addCurrentRowToPath(var path: String, currentRow: Int) -> String {
@@ -90,6 +100,7 @@ class LeastResistance {
                 leastTotalResistance = totalResistance
                 pathOfLeastResistance = path
                 furthestColumn = currentColumn
+                flowSuccessful = true
             }
         } else {
             moveToNextColumn(currentRow - 1, currentColumn: currentColumn + 1, totalResistance: totalResistance, path: path)

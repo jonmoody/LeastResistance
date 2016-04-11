@@ -73,11 +73,11 @@ class LeastResistanceTests: XCTestCase {
 
     func testWhenTraversingTheGridIfTheTotalResistanceIsGreaterThan50ThenTheFurthestPossiblePathIsSaved() {
         let grid: [[Int]] = [[1, 1, 50, 50],
-                             [5, 50, 50, 50]]
+                             [1, 2, 1, 50]]
 
         let leastResistance = LeastResistance(grid: grid)
 
-        XCTAssertEqual("1 1", leastResistance.calculateMostEfficientPath())
+        XCTAssertEqual("1 1 2", leastResistance.calculateMostEfficientPath())
     }
 
     func testWhenTraversingTheGridIfTheTotalResistanceIsGreaterThan50ThenTheCurrentResistanceIsExcluded() {
@@ -88,6 +88,17 @@ class LeastResistanceTests: XCTestCase {
         leastResistance.calculateMostEfficientPath()
 
         XCTAssertEqual(2, leastResistance.getLeastTotalResistance())
+    }
+
+    func testWhenTraversingTheGridIfOnePossiblePathIsNotSuccessfulThenADifferentPathCanBeTaken() {
+        let grid: [[Int]] = [[1, 50, 50],
+                             [1, 1, 1]]
+
+        let leastResistance = LeastResistance(grid: grid)
+
+        XCTAssertEqual("1 2 2", leastResistance.calculateMostEfficientPath())
+        XCTAssertEqual(3, leastResistance.getLeastTotalResistance())
+        XCTAssertEqual("Yes", leastResistance.isFlowSuccessful())
     }
 
     func testWhenTraversingTheGridThenTheRowsNextToTheCurrentRowCanBeTraveled() {
