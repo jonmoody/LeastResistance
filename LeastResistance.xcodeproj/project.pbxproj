@@ -9,17 +9,58 @@
 /* Begin PBXBuildFile section */
 		5E540C161CB5FA1400DC620D /* LeastResistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C151CB5FA1400DC620D /* LeastResistanceTests.swift */; };
 		5E540C1D1CB606AE00DC620D /* LeastResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C1C1CB606AE00DC620D /* LeastResistance.swift */; settings = {ASSET_TAGS = (); }; };
+		5E540C571CBB466D00DC620D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C561CBB466D00DC620D /* AppDelegate.swift */; };
+		5E540C591CBB466D00DC620D /* LeastResistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C581CBB466D00DC620D /* LeastResistanceViewController.swift */; };
+		5E540C5C1CBB466D00DC620D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E540C5A1CBB466D00DC620D /* Main.storyboard */; };
+		5E540C5E1CBB466D00DC620D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E540C5D1CBB466D00DC620D /* Assets.xcassets */; };
+		5E540C611CBB466D00DC620D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E540C5F1CBB466D00DC620D /* LaunchScreen.storyboard */; };
+		5E540C6C1CBB466E00DC620D /* LeastResistanceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C6B1CBB466E00DC620D /* LeastResistanceViewControllerTests.swift */; };
+		5E540C8D1CBB47F000DC620D /* LeastResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E540C1C1CB606AE00DC620D /* LeastResistance.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E540C681CBB466E00DC620D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E540C081CB5F9C900DC620D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E540C531CBB466D00DC620D;
+			remoteInfo = LeastResistanceUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5E540C121CB5FA1400DC620D /* LeastResistanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeastResistanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E540C151CB5FA1400DC620D /* LeastResistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastResistanceTests.swift; sourceTree = "<group>"; };
 		5E540C171CB5FA1400DC620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E540C1C1CB606AE00DC620D /* LeastResistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeastResistance.swift; sourceTree = "<group>"; };
+		5E540C541CBB466D00DC620D /* LeastResistanceUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeastResistanceUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E540C561CBB466D00DC620D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E540C581CBB466D00DC620D /* LeastResistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastResistanceViewController.swift; sourceTree = "<group>"; };
+		5E540C5B1CBB466D00DC620D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E540C5D1CBB466D00DC620D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E540C601CBB466D00DC620D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E540C621CBB466D00DC620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E540C671CBB466D00DC620D /* LeastResistanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeastResistanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E540C6B1CBB466E00DC620D /* LeastResistanceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastResistanceViewControllerTests.swift; sourceTree = "<group>"; };
+		5E540C6D1CBB466E00DC620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5E540C0F1CB5FA1400DC620D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E540C511CBB466D00DC620D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E540C641CBB466D00DC620D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,6 +75,8 @@
 			children = (
 				5E540C1B1CB6069300DC620D /* LeastResistance */,
 				5E540C141CB5FA1400DC620D /* LeastResistanceTests */,
+				5E540C551CBB466D00DC620D /* LeastResistanceUI */,
+				5E540C6A1CBB466E00DC620D /* LeastResistanceUITests */,
 				5E540C131CB5FA1400DC620D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				5E540C121CB5FA1400DC620D /* LeastResistanceTests.xctest */,
+				5E540C541CBB466D00DC620D /* LeastResistanceUI.app */,
+				5E540C671CBB466D00DC620D /* LeastResistanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +106,28 @@
 				5E540C1C1CB606AE00DC620D /* LeastResistance.swift */,
 			);
 			name = LeastResistance;
+			sourceTree = "<group>";
+		};
+		5E540C551CBB466D00DC620D /* LeastResistanceUI */ = {
+			isa = PBXGroup;
+			children = (
+				5E540C561CBB466D00DC620D /* AppDelegate.swift */,
+				5E540C581CBB466D00DC620D /* LeastResistanceViewController.swift */,
+				5E540C5A1CBB466D00DC620D /* Main.storyboard */,
+				5E540C5D1CBB466D00DC620D /* Assets.xcassets */,
+				5E540C5F1CBB466D00DC620D /* LaunchScreen.storyboard */,
+				5E540C621CBB466D00DC620D /* Info.plist */,
+			);
+			path = LeastResistanceUI;
+			sourceTree = "<group>";
+		};
+		5E540C6A1CBB466E00DC620D /* LeastResistanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E540C6B1CBB466E00DC620D /* LeastResistanceViewControllerTests.swift */,
+				5E540C6D1CBB466E00DC620D /* Info.plist */,
+			);
+			path = LeastResistanceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +150,41 @@
 			productReference = 5E540C121CB5FA1400DC620D /* LeastResistanceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5E540C531CBB466D00DC620D /* LeastResistanceUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E540C7F1CBB466E00DC620D /* Build configuration list for PBXNativeTarget "LeastResistanceUI" */;
+			buildPhases = (
+				5E540C501CBB466D00DC620D /* Sources */,
+				5E540C511CBB466D00DC620D /* Frameworks */,
+				5E540C521CBB466D00DC620D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeastResistanceUI;
+			productName = LeastResistanceUI;
+			productReference = 5E540C541CBB466D00DC620D /* LeastResistanceUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E540C661CBB466D00DC620D /* LeastResistanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E540C801CBB466E00DC620D /* Build configuration list for PBXNativeTarget "LeastResistanceUITests" */;
+			buildPhases = (
+				5E540C631CBB466D00DC620D /* Sources */,
+				5E540C641CBB466D00DC620D /* Frameworks */,
+				5E540C651CBB466D00DC620D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E540C691CBB466E00DC620D /* PBXTargetDependency */,
+			);
+			name = LeastResistanceUITests;
+			productName = LeastResistanceUITests;
+			productReference = 5E540C671CBB466D00DC620D /* LeastResistanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +196,13 @@
 					5E540C111CB5FA1400DC620D = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
+					5E540C531CBB466D00DC620D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					5E540C661CBB466D00DC620D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 5E540C531CBB466D00DC620D;
+					};
 				};
 			};
 			buildConfigurationList = 5E540C0B1CB5F9C900DC620D /* Build configuration list for PBXProject "LeastResistance" */;
@@ -102,6 +211,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5E540C071CB5F9C900DC620D;
 			productRefGroup = 5E540C131CB5FA1400DC620D /* Products */;
@@ -109,12 +219,31 @@
 			projectRoot = "";
 			targets = (
 				5E540C111CB5FA1400DC620D /* LeastResistanceTests */,
+				5E540C531CBB466D00DC620D /* LeastResistanceUI */,
+				5E540C661CBB466D00DC620D /* LeastResistanceUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5E540C101CB5FA1400DC620D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E540C521CBB466D00DC620D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E540C611CBB466D00DC620D /* LaunchScreen.storyboard in Resources */,
+				5E540C5E1CBB466D00DC620D /* Assets.xcassets in Resources */,
+				5E540C5C1CBB466D00DC620D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E540C651CBB466D00DC620D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +262,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E540C501CBB466D00DC620D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E540C8D1CBB47F000DC620D /* LeastResistance.swift in Sources */,
+				5E540C591CBB466D00DC620D /* LeastResistanceViewController.swift in Sources */,
+				5E540C571CBB466D00DC620D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E540C631CBB466D00DC620D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E540C6C1CBB466E00DC620D /* LeastResistanceViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E540C691CBB466E00DC620D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E540C531CBB466D00DC620D /* LeastResistanceUI */;
+			targetProxy = 5E540C681CBB466E00DC620D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E540C5A1CBB466D00DC620D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E540C5B1CBB466D00DC620D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E540C5F1CBB466D00DC620D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E540C601CBB466D00DC620D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E540C0C1CB5F9C900DC620D /* Debug */ = {
@@ -235,6 +409,189 @@
 			};
 			name = Release;
 		};
+		5E540C791CBB466E00DC620D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LeastResistanceUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pillar.LeastResistanceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E540C7A1CBB466E00DC620D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LeastResistanceUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pillar.LeastResistanceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E540C7B1CBB466E00DC620D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LeastResistanceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pillar.LeastResistanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeastResistanceUI.app/LeastResistanceUI";
+			};
+			name = Debug;
+		};
+		5E540C7C1CBB466E00DC620D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = LeastResistanceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pillar.LeastResistanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeastResistanceUI.app/LeastResistanceUI";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -252,6 +609,23 @@
 			buildConfigurations = (
 				5E540C191CB5FA1400DC620D /* Debug */,
 				5E540C1A1CB5FA1400DC620D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E540C7F1CBB466E00DC620D /* Build configuration list for PBXNativeTarget "LeastResistanceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E540C791CBB466E00DC620D /* Debug */,
+				5E540C7A1CBB466E00DC620D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E540C801CBB466E00DC620D /* Build configuration list for PBXNativeTarget "LeastResistanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E540C7B1CBB466E00DC620D /* Debug */,
+				5E540C7C1CBB466E00DC620D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
